@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+    <title>Detect Malicious URLs</title>
+</head>
+<body>
+    <div class="cyber-symbol">
+        <div class="shield">
+            <div class="lock"></div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1>Please enter the URL you would like to investigate:</h1>
+        <form method="POST">
+            <input type="text" name="url" placeholder="https://example.com" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result {% if 'benign' in prediction.lower() or 'safe' in prediction.lower() or 'legitimate' in prediction.lower() or 'good' in prediction.lower() %}benign{% elif 'malicious' in prediction.lower() or 'phishing' in prediction.lower() or 'bad' in prediction.lower() or 'dangerous' in prediction.lower() %}malicious{% endif %}">
+                <h2>Result: {{ prediction }}</h2>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
