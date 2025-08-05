@@ -1,0 +1,34 @@
+# Large data files
+features.csv
+url_model.pkl
+*.pkl
+*.csv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Sensitive data
+*.key
+*.pem
+*secret*
+*credential* 
