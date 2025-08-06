@@ -13,6 +13,10 @@ A machine learning-based web application that analyzes URLs to detect potential 
   - Suspicious keyword identification
   - URL structure and path analysis
   - Brand name recognition for legitimate sites
+    
+<img src="https://github.com/user-attachments/assets/70d16bf7-121f-4bc4-bb6f-36a1ce83a834" alt="malicious URL" width="300" />
+<img src="https://github.com/user-attachments/assets/224dd843-7541-4b5b-9b10-db69f3bdf518" alt="benign URL" width="300" />
+
 
 ## Technology Stack
 
