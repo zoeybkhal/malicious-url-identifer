@@ -34,54 +34,63 @@ A machine learning-based web application that analyzes URLs to detect potential 
 ## Installation
 
 1. **Clone the repository**
+ ```
    git clone https://github.com/zoeybkhal/malicious-url-identifer.git
    cd malicious_urls
+```
 
 
-2. **Install required dependencies**
+3. **Install required dependencies**
    pip install flask pandas scikit-learn tldextract joblib
    
 
-3. **Download the training dataset**
+4. **Download the training dataset**
    - Place your `malicious_phish.csv` file in the project root
    - The dataset should contain columns: `url`, `type` (where type is 'benign' or 'defacement')
 
 ## �� Setup and Training
 
 1. **Extract features from your dataset**
+ ```
    python parsing.py
-
+```
    This creates `features.csv` and `feature_names.pkl`
 
-2. **Train the machine learning model**
+3. **Train the machine learning model**
+   ```
    python machine_learning.py
+   ```
  
    This creates `url_model.pkl` with the trained model
 
-3. **Start the web application**
+5. **Start the web application**
+   ```
    python app.py
+   ```
    
 
-4. **Access the application**
+6. **Access the application**
    - Open your browser and go to `http://localhost:5000`
    - Enter any URL to analyze for malicious indicators
 
 ## 📁 Project Structure
 
-malicious_urls/
-├── app.py                 # Flask web application
-├── parsing.py             # Feature extraction for training data
-├── machine_learning.py    # Model training script
-├── feature_extraction.py  # Shared feature extraction logic
-├── static/
-│   └── design.css        # Styling for web interface
-├── index.html            # Web interface template
-├── malicious_phish.csv   # Training dataset
-├── features.csv          # Extracted features (generated)
-├── feature_names.pkl     # Feature names (generated)
-├── url_model.pkl         # Trained model (generated)
-└── README.md            # This file
 ```
+malicious_urls/
+├── app.py                  # Flask web application
+├── parsing.py              # Feature extraction for training data
+├── machine_learning.py     # Model training script
+├── feature_extraction.py   # Shared feature extraction logic
+├── static/
+│   └── design.css          # Styling for web interface
+├── index.html              # Web interface template
+├── malicious_phish.csv     # Training dataset
+├── features.csv            # Extracted features (generated)
+├── feature_names.pkl       # Feature names (generated)
+├── url_model.pkl           # Trained model (generated)
+└── README.md               # This file
+```
+
 
 
 You can customize any sections based on your specific needs or add additional information about your dataset, model performance, or deployment instructions.
